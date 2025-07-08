@@ -1,0 +1,18 @@
+
+  <h2><%= t ".title" %></h2>
+  <div id="products">
+    <% @products.each do |product| %>
+      <div class="product-card">
+        <%= link_to product do %>
+          <div class="product-image">
+            <% if product.feature_image.attached? %>
+              <%= image_tag product.feature_image, alt: product.name %>
+            <% end %>
+          </div>
+          <div class="product-name">
+            <%= product.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

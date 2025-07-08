@@ -1,0 +1,31 @@
+/* this section is for the new product form */
+.product-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.product-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form input[type="file"] {
+  width: 90%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+}
+.product-form input[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}     
