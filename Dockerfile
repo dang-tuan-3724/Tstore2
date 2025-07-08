@@ -70,3 +70,14 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 80
 CMD ["./bin/thrust", "./bin/rails", "server"]
+
+# Đảm bảo quyền thực thi
+RUN chmod +x /app/bin/rails && \
+    chmod +x /app/bin/bundle && \
+    chmod +x /app/bin/rake
+
+# Fix line endings (nếu cần)
+RUN apt-get update && apt-get install -y dos2unix && \
+    dos2unix /app/bin/rails && \
+    dos2unix /app/bin/bundle && \
+    dos2unix /app/bin/rake
